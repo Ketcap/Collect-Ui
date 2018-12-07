@@ -171,7 +171,7 @@ export default class extends Component {
     this.setState({
       operand: '',
       secondInput: '',
-      firstInput: result
+      firstInput: `${result}`
     })
   }
   render() {
