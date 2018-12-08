@@ -42,7 +42,8 @@ class UI5 extends Component {
     setTimeout(() => {
       Animated.timing(animation,
         {
-          toValue: this.props.isFocused
+          toValue: this.props.isFocused,
+          duration: 800
         }
       ).start()
     }, 0)
