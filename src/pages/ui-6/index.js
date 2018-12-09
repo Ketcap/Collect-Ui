@@ -23,7 +23,7 @@ const I2 = require('../../source/island2.jpeg');
 
 // http://collectui.com/designers/getjieyingjun/user-profile
 
-class UI5 extends Component {
+class UI6 extends Component {
   state = {
     animation: new Animated.Value(0)
   }
@@ -113,7 +113,7 @@ class UI5 extends Component {
   }
 }
 
-export default withNavigationFocus(UI5)
+export default withNavigationFocus(UI6)
 
 const styles = StyleSheet.create({
   container: {

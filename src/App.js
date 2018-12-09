@@ -5,7 +5,7 @@ import Day1 from './pages/ui-1/';
 import Day2 from './pages/ui-2/';
 
 import Day4 from './pages/ui-4';
-import Day5 from './pages/ui-5';
+import Day6 from './pages/ui-6';
 
 const Navigator = createDrawerNavigator({
   Day1: {
@@ -17,8 +17,8 @@ const Navigator = createDrawerNavigator({
   Day4: {
     screen: Day4
   },
-  Day5: {
-    screen: Day5
+  Day6: {
+    screen: Day6
   }
 }, {
     initialRouteName: 'Day1'

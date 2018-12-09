@@ -7,4 +7,5 @@ Collect Ui Daily Inpirations
 - Day 2 [Link](http://collectui.com/designers/andmironov/checkout)
 - Day 3 Landing Page Skipped ( will added for later as a web)
 - Day 4 [Link](http://collectui.com/designers/drajmund/calculator)
-- Day 5 [Link](http://collectui.com/designers/getjieyingjun/user-profile)
+- Day 5 App Icon Skipped ( can be put as a icon to this app)
+- Day 6 [Link](http://collectui.com/designers/getjieyingjun/user-profile)
