@@ -5,6 +5,7 @@ import Day1 from './pages/ui-1/';
 import Day2 from './pages/ui-2/';
 
 import Day4 from './pages/ui-4';
+
 import Day6 from './pages/ui-6';
 
 const Navigator = createDrawerNavigator({

@@ -1,0 +1,229 @@
+@import '../../mixins.scss';
+.navigation {
+  width: 100%;
+  min-height: 75px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 0 10%;
+  @include box_shadow(2);
+  @include tablet {
+    padding: 0 5%;
+  }
+  @include mobile {
+    padding: 0 2.5%;
+  }
+  ul {
+    list-style: none;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: .5em;
+    @include tablet {
+      padding: 0 5%;
+    }
+    @include mobile {
+      padding: 0 2.5%;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px 10px;
+      .searchBar {
+        border-radius: 55px;
+        height: 32.5px;
+        border: 2px solid #b6cddd;
+        outline: none;
+        padding: 0 10px;
+        &::placeholder {
+          color: #b6cddd;
+        }
+      }
+    }
+    img {
+      height: 55px;
+    }
+    &.rightNav {
+      li {
+        a {
+          font-size: 16px;
+          color: #8898a7;
+        }
+      }
+    }
+  }
+}
+
+.heroImage {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 10% 0 10%;
+    @include tablet {
+      padding: 5% 5% 0 5%;
+    }
+    @include mobile {
+      padding: 2.5% 2.5% 0 2.5%;
+    }
+    h3 {
+      font-size: 36px;
+      color: #fff;
+      font-weight: bold;
+    }
+    ul {
+      margin-top: 15px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      li {
+        font-size: 14px;
+        color: #fff;
+        &:not(:first-child) {
+          &::before {
+            content: ' / ';
+            margin: 0 5px 0 7.5px;
+          }
+        }
+      }
+    }
+    .rating {
+      position: relative;
+      margin-top: 15px;
+      color: #fff;
+      align-items: center;
+      text-indent: 20px;
+      &::before {
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: #ffbc25;
+        margin-top: 2px;
+        content: ' ';
+      }
+    }
+  }
+  .extraInfo {
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+    background: rgba(0, 0, 0, .25);
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+    height: 55px;
+    margin: auto 0 0 0;
+    padding: 0 10%;
+    align-items: center;
+    @include tablet {
+      padding: 0 5%;
+    }
+    @include mobile {
+      padding: 0 2.5%;
+    }
+  }
+}
+
+.movieGrid {
+  display: grid;
+  margin-top: 1em;
+  padding: 0 10%;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-gap: 15px;
+  @include tablet {
+    padding: 0 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  @include mobile {
+    padding: 0 2.5%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+}
+
+.movieCard {
+  width: 100%;
+  background: #fff;
+  @include box_shadow(1);
+  transition: box-shadow .2s ease-in-out;
+  &:hover {
+    @include box_shadow(3);
+  }
+  .posterImage {
+    width: 100%;
+  }
+  .details {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .genreList {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 16px;
+      margin-bottom: 5px;
+      li {
+        font-size: 12px;
+        color: #aab5bb;
+        position: relative;
+        &:not(:last-child) {
+          margin-right: 15px;
+          &::after {
+            position: absolute;
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 5px;
+            top: 5px;
+            right: -10px;
+            background-color: #aab5bb;
+            content: ' ';
+          }
+        }
+      }
+    }
+    .rating {
+      display: flex;
+      margin-top: auto;
+      font-size: 12px;
+      color: #aab5bb;
+      height: 20px;
+      justify-content: flex-end;
+      align-items: center;
+      &::before {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: #ffbc25;
+        margin-right: 5px;
+        content: ' ';
+      }
+    }
+  }
+}
+
+.strong {
+  font-weight: bold;
+}
