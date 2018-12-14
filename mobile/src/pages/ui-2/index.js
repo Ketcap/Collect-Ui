@@ -107,7 +107,6 @@ export default class App extends Component {
 }
 
 const { width, height } = Dimensions.get('window');
-// import { ifIphoneX } from 'react-native-iphone-x-helper';
 
 const styles = StyleSheet.create({
   container: {
