@@ -22,17 +22,20 @@ Index.getInitialProps = async () => {
   const { results } = await GetMovies();
   let { genres } = await Genres();
   genres = genres.reduce((prev, cur) => ({
+    
     ...prev,
     [cur.id]: cur.name
   }), {});
   const movies = results.map(({ poster_path, backdrop_path, genre_ids, ...rest }) => ({
     poster_path: Poster(poster_path),
+    
     backdrop_path: Poster(backdrop_path, 780),
     genres: genre_ids.map(e => genres[e]),
     ...rest
   }))
   console.log(movies)
   return {
+    
     movies: movies.slice(1)
   }
 }
